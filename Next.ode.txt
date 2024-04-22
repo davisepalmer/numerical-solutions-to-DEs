@@ -1,0 +1,22 @@
+##### Variables #######
+#    y= position
+#    x= momentum
+#    t= time
+
+##### Parameters #######
+#    a, b 
+par a=-1
+par b=-2
+
+###### Differential Equation #####
+x'=-a*x-b*y
+y'=x
+
+###### Initial condition ##### 
+init x=1
+init y=1
+
+###### Parameters for numerical solution ##### 
+@ total=100, dt=.05, bound=110, meth=RK4
+@ xhi=100,yhi=110,ylo=0,xlo=0 
+done

@@ -1,0 +1,24 @@
+##### Variables #######
+#    y= Salt amount in the tank
+#    t= time
+
+##### Parameters #######
+#    a= pump in brine concentration
+#    v= pump in/out rate
+#    C= brine in the tank 
+
+par v=9
+par C=1
+
+###### Differential Equation ##### 
+y' = 2*(1+cos(t))*v-y/C*v
+
+###### Initial condition ##### 
+init y=2
+ 
+
+###### Parameters for numerical solution ##### 
+ 
+@ total=100, dt=.05, bound=110, meth=RK4
+@ xhi=100,yhi=110,ylo=0,xlo=0 
+done

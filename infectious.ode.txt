@@ -1,0 +1,35 @@
+Referring the descriptions above, complete the following ode file
+
+
+##### Variables #######
+#    S= Susceptible
+#    I= infected
+#    R= removed
+ 
+
+
+##### Parameters #######
+#    beta= infected rate
+#    gamma= Recover/Removal parameter
+
+par beta=0.1
+par gamma=0.1
+
+###### Differential Equation ##### 
+S'=-beta*S*I
+I'=beta*S*I-gamma*I
+R'=gamma*I
+
+###### Conservation laws for integration Receptor ##### 
+#    S+I+R = N 
+
+init S=0.9
+init I=0.1
+init R=0
+ 
+
+
+ 
+@ total=100,dt=.05,bound=10, meth=RK4
+@ xhi=100,yhi=1,ylo=0,xlo=0
+done
